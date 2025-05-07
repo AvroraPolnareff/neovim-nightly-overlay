@@ -84,6 +84,7 @@ in
 (pkgs.neovim-unwrapped.override overrides).overrideAttrs (oa: {
   version = "nightly";
   inherit src;
+  meta = oa.meta;
 
   preConfigure = ''
     ${oa.preConfigure}
